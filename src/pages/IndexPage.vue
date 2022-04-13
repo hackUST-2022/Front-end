@@ -355,8 +355,6 @@ export default defineComponent({
       })
       .catch(() => {
         console.log("fetch error occurs");
-        nanananna
-        sasdqwdqwdwq
       });
   },
 });
