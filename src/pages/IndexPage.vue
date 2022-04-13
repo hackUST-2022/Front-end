@@ -335,17 +335,27 @@ export default defineComponent({
       search_result_list: null,
     };
   },
-  method(){
-      SearchProgram() {
-    // console.log(school_name);
-    // console.log(program_name);
-    console.log("haha");
+  methods: {
+    SearchProgram() {
+      console.log(this.school_name);
+      console.log(this.program_name);
+      // console.log("haha");
+    },
   },
-  mounted()
-  {
-    
-  }
-  }
-
+  mounted() {
+    const url =
+      "https://hackust-school-info-default-rtdb.asia-southeast1.firebasedatabase.app/school_info.json";
+    fetch(url)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+        this.data_from_firebase = data;
+      })
+      .catch(() => {
+        console.log("fetch error occurs");
+      });
+  },
 });
 </script>
