@@ -1,4 +1,4 @@
-# Quasar App (quasar-project)
+# School Application Helper (quasar-project)
 
 A Quasar Project
 
